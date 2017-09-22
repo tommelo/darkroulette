@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dark Roulette</title>
+    <link href="css/hacker.css" rel="stylesheet">
+
+    <style>
+        .container-full {
+            margin: 0 0 0 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container container-full">
+
+
+        <div class="row tall-row">
+            <div class="col-lg-12">
+                <h1 style="color:white">Let's Play a Game</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-warning" style="text-align: justify; color:white">You may find something great, something bad, something really bad or just the limbo. See where you can
+                        get hitting the play button:</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:5%">
+                <div class="col-md-12">
+                    <form class="bs-component">
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputDefault" style="color:white">Domain Prefix</label>
+                            <input class="form-control" id="prefix" type="text" maxlength="16" style="color:white">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputDefault" style="color:white">Domain Suffix</label>
+                            <input class="form-control" id="suffix" type="text" maxlength="16" style="color:white">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputDefault" style="color:white">Number of Domains</label>
+                            <input class="form-control" id="domains" type="text" value="100" min="1" style="color:white">
+                        </div>
+
+                        <div class="form-group">
+                            <a href="#" id="play" class="btn btn-success btn-block">Play</a>
+                        </div>
+
+                    </form>
+
+                    <div class="col-lg-12" id="error-container" style="text-align:center; color:red"></div>
+
+                    <div class="row tall-row" style="margin-top: 65%">
+                        <div class="col-lg-12">
+                            <h1 style="color:white">Labels</h1>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="badge" style="color:white"><img src="./img/nok.png"> Host not found</span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge" style="color:white"><img src="./img/ok.png"> The link is up</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="color:white">Generated Domains</h3>
+                </div>
+                <div class="panel-body" id="domain-panel-body" style="min-height: 720px; height: 720px; overflow:auto">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/host.js"></script>
+    <script src="./js/onion.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
